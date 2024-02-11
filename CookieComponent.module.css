@@ -1,0 +1,15 @@
+.cookie-container {
+    background-color: grey;
+    color: white;
+    width: 100%;
+}
+
+.yes {
+    background-color: green;
+    color: white;
+}
+
+.no {
+    background-color: red;
+    color: white;
+}

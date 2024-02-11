@@ -1,0 +1,26 @@
+{
+  "name": "lightweight-cookie-js",
+  "version": "1.0.0",
+  "description": "\"A lightweight package for setting cookies, removing cookies, adding a cookie banner, adding a privacy policy.\"",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "rollup": "rollup"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bowoadej/lightweight-cookie-js.git"
+  },
+  "keywords": [
+    "cookies"
+  ],
+  "author": "Bowo Adejuyigbe",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bowoadej/lightweight-cookie-js/issues"
+  },
+  "homepage": "https://github.com/bowoadej/lightweight-cookie-js#readme",
+  "dependencies": {
+    "rollup": "^4.10.0"
+  }
+}
