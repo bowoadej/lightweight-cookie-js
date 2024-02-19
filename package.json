@@ -2,10 +2,18 @@
   "name": "lightweight-cookie-js",
   "version": "1.0.0",
   "description": "\"A lightweight package for setting cookies, removing cookies, adding a cookie banner, adding a privacy policy.\"",
-  "main": "main.js",
+  "main": "main.jsx",
+  "exports": {
+    ".": {
+      "import": "./lib/main.jsx",
+      "require": "./dist/main.jsx"
+    },
+    "./package.json": "./package.json"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "rollup": "rollup"
+    "rollup": "rollup",
+    "build": "rm -rf dist && NODE_ENV=production babel src --out-dir dist --copy-files"
   },
   "repository": {
     "type": "git",
@@ -14,6 +22,10 @@
   "keywords": [
     "cookies"
   ],
+  "files": [
+    "index.js",
+    "dist/**/*"
+  ],
   "author": "Bowo Adejuyigbe",
   "license": "MIT",
   "bugs": {
@@ -21,6 +33,29 @@
   },
   "homepage": "https://github.com/bowoadej/lightweight-cookie-js#readme",
   "dependencies": {
+    "@babel/polyfill": "^7.12.1",
+    "@babel/preset-react": "^7.23.3",
+    "html-react-parser": "^5.1.6",
+    "lightweight-cookie-js": "^1.0.0",
     "rollup": "^4.10.0"
+  },
+  "peerDependencies": {
+    "@babel/core": "^7.23.9",
+    "@babel/polyfill": "^7.12.1",
+    "@babel/preset-env": "^7.23.9",
+    "@babel/preset-react": "^7.23.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "rollup": "^4.10.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.23.9",
+    "@babel/core": "^7.23.9",
+    "@babel/preset-env": "^7.23.9",
+    "@babel/preset-react": "^7.23.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "webpack": "^5.90.2",
+    "webpack-cli": "^5.1.4"
   }
 }
